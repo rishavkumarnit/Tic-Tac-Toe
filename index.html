@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gray-400 relative">
+    <div
+      id="playerOverlay"
+      class="hidden absolute h-screen inset-0 place-items-center bg-gray-700 bg-opacity-40 transition-opacity ease-in-out duration-1000 opacity-0"
+    >
+      <!-- Player 1 -->
+      <div id="player1">
+        <img
+          src="./player1.png"
+          alt="Player 1 Won"
+          class="w-56 h-56 object-contain"
+        />
+      </div>
+
+      <!-- Player 2 -->
+      <div id="player2" class="hidden">
+        <img
+          src="./player2.png"
+          alt="Player 2 Won"
+          class="w-32 h-32 object-contain"
+        />
+      </div>
+    </div>
+
+    <div class="container flex flex-col items-center mx-auto">
+      <p class="text-5xl font-bold mt-12">Tic Tac Toe</p>
+
+      <div
+        class="scoreboard flex mt-4 h-10 items-center bg-gray-500 shadow-xl text-white font-semibold rounded-sm"
+      >
+        <div class="score px-4">
+          <span>Player-1: </span>
+          <span id="player-1">0</span>
+        </div>
+        <div class="score px-4">
+          <span>Player-2: </span>
+          <span id="player-2">0</span>
+        </div>
+        <div class="score px-4">
+          <span>Ties: </span>
+          <span id="ties-score">0</span>
+        </div>
+      </div>
+      <div class="status mt-4 font-semibold text-2xl" id="status">
+        player 1 turn
+      </div>
+      <div
+        class="board grid h-80 w-80 grid-cols-3 shadow-xl shadow-gray-800 rounded-xl grid-rows-3 gap-4 m-8 bg-gray-500 p-6 items-center"
+        id="board"
+      >
+        <div
+          class="cell bg-amber-100 h-20 w-20 flex text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer justify-center items-center font-bold"
+          data-index="0"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 flex text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer justify-center items-center font-bold"
+          data-index="1"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 flex text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer justify-center items-center font-bold"
+          data-index="2"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer flex justify-center items-center font-bold"
+          data-index="3"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer flex justify-center items-center font-bold"
+          data-index="4"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer flex justify-center items-center font-bold"
+          data-index="5"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer flex justify-center items-center font-bold"
+          data-index="6"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer flex justify-center items-center font-bold"
+          data-index="7"
+        ></div>
+        <div
+          class="cell bg-amber-100 h-20 w-20 text-4xl rounded-xl hover:bg-amber-200 hover:cursor-pointer flex justify-center items-center font-bold"
+          data-index="8"
+        ></div>
+      </div>
+      <button
+        class="restart-button mt-3 w-26 bg-amber-300 shadow-xs shadow-amber-500 hover:cursor-pointer active:scale-95 active:translate-z-1 hover:bg-amber-500 rounded-sm"
+      >
+        Play again
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
